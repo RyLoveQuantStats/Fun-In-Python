@@ -1,6 +1,6 @@
 ### Relative Strength Index and High/Low Swings ###
 ### Author: Ryan Loveless ###
-### Date: 2022-02-22 ###
+### Date: 2025-01-12 ###
 
 # For detecting RSI divergences (regular and hidden) and high/low swings to identify potential trade setups. 
 

@@ -1,3 +1,8 @@
+### NFL Sports Betting ###
+### Author: Ryan Loveless ###
+### Date: 2025-01-12 ###
+
+
 import pandas as pd
 import numpy as np
 import logging

@@ -1,6 +1,6 @@
 ### Options Trading Calculcator ###
 ### Author: Ryan Loveless ###
-### Date: 2022-02-22 ###
+### Date: 2025-01-04 ###
 
 # For computing pnl and other metrics for options trading. 
 

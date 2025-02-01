@@ -1,6 +1,6 @@
 ### Bollinger Band Width Percentile ###
 ### Author: Ryan Loveless ###
-### Date: 2022-02-22 ###
+### Date: 2025-01-12 ###
 
 # For computing the Bollinger Band Width Percentile in Python for volatility analysis and trading strategies.
 

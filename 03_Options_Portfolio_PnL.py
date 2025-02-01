@@ -1,6 +1,6 @@
 ### Payout Diagram + PnL ###
 ### Author: Ryan Loveless ###
-### Date: 2022-02-22 ###
+### Date: 2025-01-30 ###
 
 # For computing a payout diagram, pnl and other metrics for options trading. 
 
@@ -33,7 +33,7 @@ def portfolio_payout(asset_price, portfolio):
 # Example Portfolio
 portfolio = [
     ('call', 0.0, 95.4815, 4.66),
-    ('forward', 100.0, 100.0, 0.0),
+    ('forward', 100.0, 0, 100.0),
 ]
 
 # Simulation Data
