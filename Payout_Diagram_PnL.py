@@ -1,3 +1,9 @@
+### Payout Diagram + PnL ###
+### Author: Ryan Loveless ###
+### Date: 2022-02-22 ###
+
+# For computing a payout diagram, pnl and other metrics for options trading. 
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm, kurtosis, skew

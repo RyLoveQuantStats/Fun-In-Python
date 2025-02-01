@@ -1,3 +1,9 @@
+### Bollinger Band Width Percentile ###
+### Author: Ryan Loveless ###
+### Date: 2022-02-22 ###
+
+# For computing the Bollinger Band Width Percentile in Python for volatility analysis and trading strategies.
+
 import numpy as np
 import pandas as pd
 

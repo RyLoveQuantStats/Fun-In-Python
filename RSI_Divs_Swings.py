@@ -1,3 +1,10 @@
+### Relative Strength Index and High/Low Swings ###
+### Author: Ryan Loveless ###
+### Date: 2022-02-22 ###
+
+# For detecting RSI divergences (regular and hidden) and high/low swings to identify potential trade setups. 
+
+
 import pandas as pd
 import yfinance as yf
 import pandas_ta as ta

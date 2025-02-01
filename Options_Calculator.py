@@ -1,3 +1,10 @@
+### Options Trading Calculcator ###
+### Author: Ryan Loveless ###
+### Date: 2022-02-22 ###
+
+# For computing pnl and other metrics for options trading. 
+
+
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output, State
