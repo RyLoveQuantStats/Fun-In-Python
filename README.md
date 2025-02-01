@@ -17,28 +17,42 @@ Description: Detects RSI divergences (both regular and hidden) and high/low swin
 Skills Highlighted: RSI divergence detection, pivot point calculations, trade simulation, and risk management.
 ---
 **What You'll Find Here**
+
 Trading Strategies: Algorithmic models leveraging Bollinger Bands, RSI, and payout diagrams.
+
 Portfolio Management: Tools for tracking options portfolios and calculating PnL metrics.
+
 Quantitative Research: Techniques for volatility analysis, Monte Carlo simulations, and statistical modeling.
+
 Interactive Tools: A Dash application for real-time options trading analysis.
+
 ---
 **How to Use**
 1. Clone the repository:
+
 git clone https://github.com/RyLoveQuantStats/YourRepoName.git
+
 cd YourRepoName
 
+
 2. Install the required Python libraries:
+
 pip install -r requirements.txt
+
 
 3. Run the scripts:
 
 ---
 
 For standalone scripts: Execute python script_name.py in your terminal.
+
 For the Dash app (Options Trading Calculator): Run the script and open the app in your browser at http://127.0.0.1:8050/.
+
 ---
 **Education**
 Master of Science in Finance (Financial Data Track) – University of Colorado Boulder (2025)
+
 Bachelor of Science in Cell & Molecular Biology – University of Michigan (2019)
+
 
 Feel free to reach out with questions, feedback, or collaboration ideas. You can connect with me through my GitHub profile.
