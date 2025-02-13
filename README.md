@@ -9,13 +9,10 @@ This repository showcases Python scripts focused on quantitative finance, techni
 2. **Options Trading Calculator**
 - Description: A Dash-based web application for managing an options trading portfolio. Features include real-time trade metrics calculations, margin requirements, PnL tracking, and portfolio summaries. This interactive tool is designed to streamline portfolio management and enhance decision-making for options traders.
 - Skills Highlighted: Options portfolio management, trade analytics, Dash app development, and interactive user interface design.
-3. **Payout Diagram + PnL Analysis**
-- Description: Simulates options portfolio payouts and generates PnL distributions under various market scenarios using Monte Carlo simulations. The script visualizes payout diagrams and evaluates portfolio risk metrics, providing insights into expected returns and potential losses.
-- Skills Highlighted: Monte Carlo simulations, options portfolio analysis, PnL visualization, and statistical modeling.
-4. **Relative Strength Index (RSI) and High/Low Swings**
+3. **Relative Strength Index (RSI) and High/Low Swings**
 - Description: Detects RSI divergences (both regular and hidden) and high/low swings to identify potential trade setups. Includes advanced features such as dynamic position sizing, risk management, and multi-symbol trade simulations for comprehensive strategy execution.
 - Skills Highlighted: RSI divergence detection, pivot point calculations, trade simulation, and risk management.
-5. **NFL Game and Betting Analytics**
+4. **NFL Game and Betting Analytics**
 - Description: Analyzes NFL data to predict team performance using machine learning and simulates betting strategies. Includes data collection, cleaning, feature engineering, Random Forest modeling, and ROI-based betting simulations.
 - Skills Highlighted:
 Data cleaning, machine learning, betting simulation, and data visualization.
