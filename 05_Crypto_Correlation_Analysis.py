@@ -22,10 +22,11 @@ from scipy.cluster.hierarchy import linkage, dendrogram
 from datetime import datetime, timedelta
 import time
 
+from constants import cg_demo_api_key
 # ----------------------------------------------------------------------
 # 1) Get the Top 30 Coins by Market Cap and Filter Unwanted Tokens
 # ----------------------------------------------------------------------
-cg = CoinGeckoAPI(demo_api_key='CG-vFJ2uXSh6ESk3ta7zrjeD8nd')
+cg = CoinGeckoAPI(cg_demo_api_key)
 
 # Retrieve top 30 coins by market cap
 top_coins = cg.get_coins_markets(
