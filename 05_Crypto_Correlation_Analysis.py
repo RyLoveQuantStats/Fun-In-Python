@@ -23,10 +23,12 @@ from datetime import datetime, timedelta
 import time
 
 from constants import cg_demo_api_key
+cg = CoinGeckoAPI(cg_demo_api_key)
+
 # ----------------------------------------------------------------------
 # 1) Get the Top 30 Coins by Market Cap and Filter Unwanted Tokens
 # ----------------------------------------------------------------------
-cg = CoinGeckoAPI(cg_demo_api_key)
+
 
 # Retrieve top 30 coins by market cap
 top_coins = cg.get_coins_markets(
