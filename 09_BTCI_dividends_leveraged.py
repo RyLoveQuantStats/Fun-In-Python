@@ -1,3 +1,95 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import yfinance as yf
+
+# ---------------------------
+# 1) Fetch Historical Data
+# ---------------------------
+btc_ticker = "BTC-USD"
+btci_ticker = "BTCI"  # Replace with the correct BTCI ticker if available
+
+# Download the last 5 months of daily data for both tickers
+btc_data = yf.download(btc_ticker, period="5mo", interval="1d")
+btci_data = yf.download(btci_ticker, period="5mo", interval="1d")
+
+# ---------------------------
+# 1a) Flatten MultiIndex Columns if Necessary
+# ---------------------------
+# Use the first level of the MultiIndex (which contains the actual price labels)
+if isinstance(btc_data.columns, pd.MultiIndex):
+    btc_data.columns = btc_data.columns.get_level_values(0)
+if isinstance(btci_data.columns, pd.MultiIndex):
+    btci_data.columns = btci_data.columns.get_level_values(0)
+
+# Use the "Close" price for both assets
+btc_prices = btc_data["Close"]
+btci_prices = btci_data["Close"]
+
+# ---------------------------
+# 2) Merge Data & Calculate Daily Returns
+# ---------------------------
+# Create a DataFrame with both BTC and BTCI prices using the common date index
+df = pd.DataFrame({
+    "BTC Price": btc_prices,
+    "BTCI Price": btci_prices
+}).dropna()  # Drop any dates with missing data
+
+# Calculate daily percentage changes (returns)
+df["BTC Return"] = df["BTC Price"].pct_change()
+df["BTCI Return"] = df["BTCI Price"].pct_change()
+df.dropna(inplace=True)  # Remove the first row with NaN returns
+
+# ---------------------------
+# 3) Compute Correlation Metrics
+# ---------------------------
+# Overall Pearson correlation between BTC and BTCI daily returns
+overall_corr = df["BTC Return"].corr(df["BTCI Return"])
+print(f"\nOverall correlation between BTC and BTCI daily returns: {overall_corr:.4f}")
+
+# Compute a 30-day rolling correlation between BTC and BTCI daily returns
+df["Rolling Corr (30d)"] = df["BTC Return"].rolling(window=30).corr(df["BTCI Return"])
+avg_rolling_corr = df["Rolling Corr (30d)"].mean()
+print(f"Average 30-day rolling correlation: {avg_rolling_corr:.4f}")
+
+# ---------------------------
+# 4) Visualize the Results
+# ---------------------------
+plt.figure(figsize=(14, 6))
+
+# (A) Scatter Plot with Regression Line for Daily Returns
+plt.subplot(1, 2, 1)
+sns.regplot(x=df["BTC Return"], y=df["BTCI Return"], scatter_kws={"alpha": 0.5}, line_kws={"color": "red"})
+plt.xlabel("BTC Daily Return")
+plt.ylabel("BTCI Daily Return")
+plt.title(f"BTC vs. BTCI Daily Returns\nOverall Corr: {overall_corr:.2f}")
+
+# (B) Rolling 30-Day Correlation Plot
+plt.subplot(1, 2, 2)
+plt.plot(df.index, df["Rolling Corr (30d)"], label="30-Day Rolling Corr")
+plt.axhline(overall_corr, linestyle="dashed", color="red", label=f"Overall Corr: {overall_corr:.2f}")
+plt.xlabel("Date")
+plt.ylabel("Rolling 30-Day Correlation")
+plt.title("Rolling 30-Day Correlation")
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
